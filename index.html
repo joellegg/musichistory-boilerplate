@@ -4,17 +4,43 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div>
-		<ul class="flexible">
+	<div class="top_bar">
+		<ul class="box nav_bar">
 			<li><a href="#">View Music</a></li>
+			<li>|</li>
 			<li><a href="#">Add Music</a></li>
+			<li>|</li>
 			<li><a href="#">Play Music</a></li>
 		</ul>
 	</div>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<div class="container-1">
+		<div class="box left_section">
+			<div>
+				<label for="music_length">Song length:</label>
+				<input type="range" name="music_length">
+			</div>
+			<div>
+				<label for="select">Artist:</label><br>
+				<select name="select">
+				  <option value="value1">Value 1</option> 
+				  <option value="value2" selected>Value 2</option>
+				  <option value="value3">Value 3</option>
+				</select>
+			</div>
+		</div>
+		<div class="box right_section">
+			<h1 class="dark-yellow">Song Name</h1>
+			<h4>Artist name | Album name | Genre</h4>
+			<h1 class="dark-yellow">Song Name</h1>
+			<h4>Artist name | Album name | Genre</h4>
+			<h1 class="dark-yellow">Song Name</h1>
+			<h4>Artist name | Album name | Genre</h4>
+			<h1 class="dark-yellow">Song Name</h1>
+			<h4>Artist name | Album name | Genre</h4>
+		</div>
+	</div>
 </body>
 </html>
