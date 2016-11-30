@@ -22,6 +22,9 @@ body {
 .bottom_space {
 	margin-bottom: 1em;
 }
+.half_bottom_space {
+	margin-bottom: 0.5em;
+}
 
  /* Flexbox styling */
 .box {
