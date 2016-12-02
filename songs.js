@@ -18,5 +18,15 @@ for (var i = 0; i < songs.length; i++) {
 }
 
 // Must add each string to the DOM in index.html in the main content area
+var songPanel = document.getElementsByClassName("box right_section")[0];
+songPanel.innerHTML = "";
+for (var i = 0; i < songs.length; i++) {
+    var p = document.createElement('p');
+    p.className = i;
+    p.innerHTML = songs[i];
+    console.log(p);
+    songPanel.appendChild(p);
+}
+
 
 console.log(songs);
