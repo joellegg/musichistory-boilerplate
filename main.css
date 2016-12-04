@@ -63,5 +63,6 @@ body {
 	flex-direction: column;
 	width: 50%;
 }
-
-
+.inlineMusic {
+	display: inline-flex;
+}
