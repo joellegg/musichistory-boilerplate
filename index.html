@@ -16,8 +16,7 @@
         </ul>
     </div>
 
-    <section id='list-view'>
-        List
+    <section id='list-view' class='visible'>
         <div class="container-1">
             <!-- left box -->
             <div class="box left_section">
@@ -68,32 +67,47 @@
             <!-- right box -->
             <div class="box right_section">
                 <h2 class="dark-yellow">Song Name</h2>
-                <div class="inlineMusic">
+                <div class="inlineFlex">
                     <h4>Artist name | Album name | Genre</h4>
                 </div>
                 <h2 class="dark-yellow">Song Name</h2>
-                <div class="inlineMusic">
+                <div class="inlineFlex">
                     <h4>Artist name | Album name | Genre</h4>
                 </div>
                 <h2 class="dark-yellow">Song Name</h2>
-                <div class="inlineMusic">
+                <div class="inlineFlex">
                     <h4>Artist name | Album name | Genre</h4>
                 </div>
                 <h2 class="dark-yellow">Song Name</h2>
-                <div class="inlineMusic">
+                <div class="inlineFlex">
                     <h4>Artist name | Album name | Genre</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id='add-view'>
-        Add
+    <section id='add-view' class='hidden'>
+        <div class='addSongs'>
+            <div class='container-1 margin_center'>
+                <div class='addSongs width30'>
+                    <p for='songname'>Song name:</p>
+                    <p for='artist'>Artist:</p>
+                    <p for='album'>Album:</p>
+                </div>
+                <div class='addSongs width70'>
+                    <input class='full_width' type="text" name="songname">
+                    <input class='full_width' type="text" name='artist'>
+                    <input class='full_width' type="text" name="album">
+                </div>
+            </div>
+            <div class='full_width'>
+                <button class='width30'>Add</button>
+            </div>
+        </div>
     </section>
 
-    <script type="text/javascript" src="home.js"></script>
-    <script type="text/javascript" src="list.js"></script>
-    <script type="text/javascript" src="add.js"></script>
-    <script type="text/javascript" src="songs.js"></script>
+    <script type="text/javascript" src="js/list.js"></script>
+    <script type="text/javascript" src="js/add.js"></script>
+    <script type="text/javascript" src="js/songs.js"></script>
 </body>
 </html>
