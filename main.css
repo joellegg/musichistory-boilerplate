@@ -29,8 +29,9 @@ body {
 	margin: 0 auto;
 }
 button.width30 {
-	margin-left: 50%;
+	margin-left: 45%;
 	font-size:1.1em;
+	width: 30%;
 }
 .centerFlex {
 	justify-content: center;
