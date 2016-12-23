@@ -27,7 +27,7 @@ for (var i = 0; i < songs.length; i++) {
     // song[0] = song title; song[1] = artist; song[2] = album
     // Song Title
         // <div className = "inlineMusic">
-        //   <h4>Artist | Album | Genre</h4>
+            //   <h4>Artist | Album | Genre</h4>
         // </div>
     // h2 to hold song title
     var h2 = document.createElement('h2');
