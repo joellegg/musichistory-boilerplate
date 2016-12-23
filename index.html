@@ -10,92 +10,86 @@
     <!-- top box -->
     <div>
         <ul class="box nav_bar">
-            <li class="right-margin"><a href="index.html" id='link-home' class="remove-decoration">Home</a></li>
-            <li class="right-margin">|</li>
             <li class="right-margin"><a href="#" id='link-list' class="remove-decoration">List Music</a></li>
             <li class="right-margin">|</li>
             <li class="right-margin"><a href="#" id='link-add' class="remove-decoration">Add Music</a></li>
         </ul>
     </div>
 
-    <section id='home-view'>
-        Home
-    </section>
-
     <section id='list-view'>
         List
+        <div class="container-1">
+            <!-- left box -->
+            <div class="box left_section">
+                <div class="bottom_space">
+                    <label for="music_length">Song length:</label>
+                    <input type="range" name="music_length" class="full_width">
+                </div>
+                <div class="bottom_space">
+                    <label for="select">Artist:</label>
+                    <select name="select" class="full_width">
+                      <option value="value1" selected>Radical Face</option>
+                      <option value="value2">Mumford & Sons</option>
+                      <option value="value3">Bone Thugz N Harmony</option>
+                      <option value="value4">Lucas Graham</option>
+                      <option value="value5">Akon</option>
+                    </select>
+                </div>
+                <div class="bottom_space">
+                    <label for="select">Album:</label>
+                    <select name="select" class="full_width">
+                      <option value="value1" selected>The Family Tree: The Branches</option>
+                      <option value="value2">The Family Tree: The Roots</option>
+                      <option value="value3">Album 3</option>
+                      <option value="value4">Album 4</option>
+                      <option value="value5">Album 5</option>
+                    </select>
+                </div>
+
+                <label class="half_bottom_space">Genre:</label>
+                <div class="container-1 bottom_space">
+                    <div class="right50">
+                        <input type="checkbox" id="cbox1" value="first_checkbox"><label for="cbox1" class="left-margin">Rock</label><br>
+                        <input type="checkbox" id="cbox2" value="second_checkbox"><label for="cbox2" class="left-margin">Classic</label><br>
+                        <input type="checkbox" id="cbox3" value="third_checkbox"><label for="cbox3" class="left-margin">Pop</label>
+                    </div>
+                    <div class="right50">
+                        <input type="checkbox" id="cbox4" value="fourth_checkbox"><label for="cbox4" class="left-margin">Jazz</label><br>
+                        <input type="checkbox" id="cbox5" value="fifth_checkbox"><label for="cbox5" class="left-margin">Blues</label><br>
+                        <input type="checkbox" id="cbox6" value="sixth_checkbox"><label for="cbox6" class="left-margin">Hip Hop</label>
+                    </div>
+                </div>
+                <!-- filter button -->
+                <div>
+                    <button class="full_width">Filter</button>
+                </div>
+            </div>
+
+            <!-- right box -->
+            <div class="box right_section">
+                <h2 class="dark-yellow">Song Name</h2>
+                <div class="inlineMusic">
+                    <h4>Artist name | Album name | Genre</h4>
+                </div>
+                <h2 class="dark-yellow">Song Name</h2>
+                <div class="inlineMusic">
+                    <h4>Artist name | Album name | Genre</h4>
+                </div>
+                <h2 class="dark-yellow">Song Name</h2>
+                <div class="inlineMusic">
+                    <h4>Artist name | Album name | Genre</h4>
+                </div>
+                <h2 class="dark-yellow">Song Name</h2>
+                <div class="inlineMusic">
+                    <h4>Artist name | Album name | Genre</h4>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id='add-view'>
         Add
     </section>
-    <div class="container-1">
-        <!-- left box -->
-        <div class="box left_section">
-            <div class="bottom_space">
-                <label for="music_length">Song length:</label>
-                <input type="range" name="music_length" class="full_width">
-            </div>
-            <div class="bottom_space">
-                <label for="select">Artist:</label>
-                <select name="select" class="full_width">
-                  <option value="value1" selected>Radical Face</option>
-                  <option value="value2">Mumford & Sons</option>
-                  <option value="value3">Bone Thugz N Harmony</option>
-                  <option value="value4">Lucas Graham</option>
-                  <option value="value5">Akon</option>
-                </select>
-            </div>
-            <div class="bottom_space">
-                <label for="select">Album:</label>
-                <select name="select" class="full_width">
-                  <option value="value1" selected>The Family Tree: The Branches</option>
-                  <option value="value2">The Family Tree: The Roots</option>
-                  <option value="value3">Album 3</option>
-                  <option value="value4">Album 4</option>
-                  <option value="value5">Album 5</option>
-                </select>
-            </div>
-
-            <label class="half_bottom_space">Genre:</label>
-            <div class="container-1 bottom_space">
-                <div class="right50">
-                    <input type="checkbox" id="cbox1" value="first_checkbox"><label for="cbox1" class="left-margin">Rock</label><br>
-                    <input type="checkbox" id="cbox2" value="second_checkbox"><label for="cbox2" class="left-margin">Classic</label><br>
-                    <input type="checkbox" id="cbox3" value="third_checkbox"><label for="cbox3" class="left-margin">Pop</label>
-                </div>
-                <div class="right50">
-                    <input type="checkbox" id="cbox4" value="fourth_checkbox"><label for="cbox4" class="left-margin">Jazz</label><br>
-                    <input type="checkbox" id="cbox5" value="fifth_checkbox"><label for="cbox5" class="left-margin">Blues</label><br>
-                    <input type="checkbox" id="cbox6" value="sixth_checkbox"><label for="cbox6" class="left-margin">Hip Hop</label>
-                </div>
-            </div>
-            <!-- filter button -->
-            <div>
-                <button class="full_width">Filter</button>
-            </div>
-        </div>
-
-        <!-- right box -->
-        <div class="box right_section">
-            <h2 class="dark-yellow">Song Name</h2>
-            <div class="inlineMusic">
-                <h4>Artist name | Album name | Genre</h4>
-            </div>
-            <h2 class="dark-yellow">Song Name</h2>
-            <div class="inlineMusic">
-                <h4>Artist name | Album name | Genre</h4>
-            </div>
-            <h2 class="dark-yellow">Song Name</h2>
-            <div class="inlineMusic">
-                <h4>Artist name | Album name | Genre</h4>
-            </div>
-            <h2 class="dark-yellow">Song Name</h2>
-            <div class="inlineMusic">
-                <h4>Artist name | Album name | Genre</h4>
-            </div>
-        </div>
-    </div>
 
     <script type="text/javascript" src="home.js"></script>
     <script type="text/javascript" src="list.js"></script>
