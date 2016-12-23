@@ -32,6 +32,9 @@ button.width30 {
 	margin-left: 50%;
 	font-size:1.1em;
 }
+.centerFlex {
+	justify-content: center;
+}
 
  /* Flexbox styling */
 .box {
@@ -50,11 +53,14 @@ button.width30 {
 .width50 {
 	width: 50%;
 }
-.width30 {
-	width: 40%;
+.width20 {
+	width: 20%;
 }
-.width70 {
-	width: 60%;
+.width80 {
+	width: 80%;
+}
+.width100 {
+	width: 100%;
 }
 
 .left_section {
