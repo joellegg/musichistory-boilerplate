@@ -14,6 +14,8 @@ addLink.addEventListener("click", function() {
 /////////////////////////////
 
 let songs = [];
+let original5Music;
+let add2Music;
 let addSongButton = document.querySelector('#addSong');
 let addSong;
 let addArtist;
@@ -42,3 +44,31 @@ addSongButton.addEventListener('click', function() {
 /////////////////////////////
 /////     Functions     /////
 /////////////////////////////
+
+
+
+// 3.
+function musicToParse(e) {
+    original5Music = JSON.parse(e.target.responseText);
+    loadJSON(categoriesToParse, 'categories.json');
+}
+// 5.
+function categoriesToParse(e) {
+    add2Music = JSON.parse(e.target.responseText);
+    // function to run next
+}
+
+/////////////////////////////
+////    XMLR request    /////
+/////////////////////////////
+
+// 1. This function will use the loadJSON function to load the json file and then run function musicToParse
+loadJSON(musicToParse, 'music.json');
+
+// 2., 4.
+function loadJSON (functionToRun, jsonFile) {
+    var newRequest = new XMLHttpRequest();
+    newRequest.addEventListener('load', functionToRun);
+    newRequest.open("GET", jsonFile);
+    newRequest.send();
+}
