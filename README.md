@@ -23,3 +23,18 @@
 1. When the user clicks on "Add Music" in the navigation bar, the List Music View should be hidden, and the Add Music View should be shown (see example wireframe).
 1. When the user clicks on "List Music" in the navigation bar, the Add Music View should be hidden, and the List Music View should be shown (see example wireframe).
 1. Once the user fills out the song form and clicks the add button, you should collect all values from the input fields, add the song to your array of songs, and update the song list in the DOM.
+
+# Music History Part 4
+
+## Part One
+
+1. Read from local JSON file with an XHR.
+1. Loop over results and inject into Music History list view.
+1. Add delete button DOM to each row and, when it is clicked, delete the entire row in the DOM.
+
+## Part Two
+
+1. Take your music and split it into two JSON file instead of them all living on one file.
+1. Add a button at the bottom of your music list and label it "More >".
+1. Load the songs from the first list and inject the DOM into the document as you've already done.
+1. When the user clicks that button, load the songs from the second JSON file and append them to the bottom of the existing music, but before the More button.
