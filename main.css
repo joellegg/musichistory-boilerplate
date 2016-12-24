@@ -36,6 +36,9 @@ button.width30 {
 .centerFlex {
 	justify-content: center;
 }
+.topMargin {
+	margin-top: 0.5em;
+}
 
  /* Flexbox styling */
 .box {

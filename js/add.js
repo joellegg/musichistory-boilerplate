@@ -33,10 +33,10 @@ addSongButton.addEventListener('click', function() {
     if (addSong === "" || addArtist === "" || addAlbum === "") {
         alert('You must enter all fields');
     } else {
-        songs.push(addSong + ' > by ' + addArtist + ' on the album ' + addAlbum)
+        songs.push(addSong + ' - by ' + addArtist + ' on the album ' + addAlbum)
     };
-
     // write variables to the DOM
+    cleanUpSongs();
 })
 
 /////////////////////////////
