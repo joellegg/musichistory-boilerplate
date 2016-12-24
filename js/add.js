@@ -3,14 +3,15 @@
 /////////////////////////////
 
 // variables
-let songs = [];
 let original5Music;
 let add2Music;
+let userAddedMusic;
 
 // input fields
 let addSong;
 let addArtist;
 let addAlbum;
+let addGenre;
 
 // buttons or links
 let addLink = document.querySelector("#link-add");
@@ -33,15 +34,20 @@ addSongButton.addEventListener('click', function() {
     addSong = document.querySelector('#songName').value;
     addArtist = document.querySelector('#artistName').value;
     addAlbum = document.querySelector('#albumName').value;
+    addGenre = document.querySelector('#genreName').value;
     // if any fields are blank display alert
     // else add songs to the array of songs
-    if (addSong === "" || addArtist === "" || addAlbum === "") {
+    if (addSong === "" || addArtist === "" || addAlbum === "" || addGenre === "") {
         alert('You must enter all fields');
     } else {
-        songs.push(addSong + ' - by ' + addArtist + ' on the album ' + addAlbum)
+        userAddedMusic = {
+            "Song": addSong,
+            "Artist": addArtist,
+            "Album": addAlbum,
+            "Genre": addGenre}
     };
     // write variables to the DOM
-    cleanUpSongs();
+    addUserMusic();
 })
 
 /////////////////////////////
@@ -56,7 +62,7 @@ function musicToParse(e) {
 // 5.
 function music2ToParse(e) {
     add2Music = JSON.parse(e.target.responseText);
-    cleanUpSongs();
+    combineMusic();
 }
 
 /////////////////////////////
