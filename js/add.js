@@ -1,29 +1,32 @@
-var addLink = document.getElementById("link-add");
-var addView = document.getElementById("add-view");
-
-addLink.addEventListener("click", function() {
-  listView.classList.add("hidden");
-
-  addView.classList.add("visible");
-  addView.classList.remove("hidden");
-
-});
-
 /////////////////////////////
 ///   Global Variables    ///
 /////////////////////////////
 
+// variables
 let songs = [];
 let original5Music;
 let add2Music;
-let addSongButton = document.querySelector('#addSong');
+
+// input fields
 let addSong;
 let addArtist;
 let addAlbum;
 
+// buttons or links
+let addLink = document.querySelector("#link-add");
+let addView = document.querySelector("#add-view");
+let addSongButton = document.querySelector('#addSong');
+
 ///////////////////////////
 ///   Event Listeners   ///
 ///////////////////////////
+
+// When add music tab is clicked then hide the list view and show add view section
+addLink.addEventListener("click", function() {
+  listView.classList.add("hidden");
+  addView.classList.add("visible");
+  addView.classList.remove("hidden");
+});
 
 // Get inputs when the button is pressed
 addSongButton.addEventListener('click', function() {
@@ -45,25 +48,23 @@ addSongButton.addEventListener('click', function() {
 /////     Functions     /////
 /////////////////////////////
 
-
-
 // 3.
 function musicToParse(e) {
     original5Music = JSON.parse(e.target.responseText);
-    loadJSON(categoriesToParse, 'categories.json');
+    loadJSON(music2ToParse, 'JSON/music2.json');
 }
 // 5.
-function categoriesToParse(e) {
+function music2ToParse(e) {
     add2Music = JSON.parse(e.target.responseText);
-    // function to run next
+    cleanUpSongs();
 }
 
 /////////////////////////////
-////    XMLR request    /////
+////    XMLHR request   /////
 /////////////////////////////
 
 // 1. This function will use the loadJSON function to load the json file and then run function musicToParse
-loadJSON(musicToParse, 'music.json');
+loadJSON(musicToParse, 'JSON/music.json');
 
 // 2., 4.
 function loadJSON (functionToRun, jsonFile) {

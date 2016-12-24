@@ -1,7 +1,7 @@
 
 // Each student must add one song to the beginning and the end of the array.
-songs.unshift("Stay Alive > by Jose Gonzalez on the album The Secret Life of Walter Mitty");
-songs.push("All My Days > by Alex Murdoch on the album Time Without Consequence");
+//songs.unshift("Stay Alive > by Jose Gonzalez on the album The Secret Life of Walter Mitty");
+//songs.push("All My Days > by Alex Murdoch on the album Time Without Consequence");
 
 /////////////////////////////
 ///   Global Variables    ///
@@ -14,9 +14,6 @@ songPanel.innerHTML = "";
 /////////////////////////////
 /////     Functions     /////
 /////////////////////////////
-
-// call the function once when page loads. Will run again when songs are added
-cleanUpSongs();
 
 function cleanUpSongs() {
     // Loop over the array and remove any words or characters that obviously don't belong.
