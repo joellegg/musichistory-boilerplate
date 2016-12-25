@@ -70,6 +70,7 @@ function original5ToHTML() {
     }
     songPanel.innerHTML += `<button id='moreMusicButton'>More ></button`;
     getDeleteRowButtons();
+    getMoreMusicButton();
 }
 
 //load add2Music when the more button is pressed
@@ -86,6 +87,7 @@ function add2MusicHTML() {
             </div>
             `;
     }
+    getDeleteRowButtons();
 }
 
 // 3.

@@ -42,13 +42,12 @@ function addUserMusic() {
     getDeleteRowButtons();
 }
 
+// GET THE DELETE ROW BUTTONS
+    // ADD EVENT LISTENER TO THE BUTTONS
+    // DELETE THE ROWS WHEN BUTTON IS PRESSED
+
 function getDeleteRowButtons() {
     deleteRowButtons = document.querySelectorAll('.deleteRowButton');
-    getMoreMusicButton();
-}
-
-function getMoreMusicButton() {
-    addMusicButton = document.querySelector('#moreMusicButton');
     deleteRowListener();
 }
 
@@ -58,16 +57,23 @@ function deleteRowListener() {
     for (let i = 0; i < deleteRowButtons.length; i++) {
         deleteRowButtons[i].addEventListener('click', deleteRow);
     }
+}
+
+function deleteRow(e) {
+    console.log('delete button pressed')
+    let button = e.target.parentNode.parentNode.parentNode;
+    button.removeChild(e.target.parentNode.parentNode);
+}
+
+// GET THE MORE MUSIC BUTTON
+    // ADD EVENT LISTENER TO THE MORE MUSIC BUTTON SO WHEN PRESSED IT WILL WRITE TO HTML
+function getMoreMusicButton() {
+    addMusicButton = document.querySelector('#moreMusicButton');
     add2MusicListener();
 }
 
 function add2MusicListener() {
     addMusicButton.addEventListener('click', add2MusicHTML)
-}
-
-function deleteRow(e) {
-    let button = e.target.parentNode.parentNode.parentNode;
-    button.removeChild(e.target.parentNode.parentNode);
 }
 
 ///////////////////////////////////
