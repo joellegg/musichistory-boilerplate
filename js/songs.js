@@ -8,6 +8,10 @@ let allMusic = {};
 var songPanel = document.getElementsByClassName("box right_section")[0];
 songPanel.innerHTML = "";
 
+// buttons
+    // move to function and call when music is added
+let deleteRowButtons;
+
 
 /////////////////////////////
 /////     Functions     /////
@@ -25,12 +29,16 @@ function addUserMusic() {
     if (userAddedMusic !== undefined) {
         songPanel.innerHTML +=
             `
-            <h2 class='dark-yellow'>${userAddedMusic.Song}</h2>
-            <div class='inlineFlex'>
-                <h4 class='topMargin'>${userAddedMusic.Artist} | ${userAddedMusic.Album} | ${userAddedMusic.Genre}</h4>
-            </div>
+            <div>
+                <h2 class='dark-yellow'>${userAddedMusic.Song}</h2>
+                <div class='musicRowButton'>
+                    <h4 class='topMargin'>${userAddedMusic.Artist} | ${userAddedMusic.Album} | ${userAddedMusic.Genre}</h4>
+                    <button class='deleteRowButton'>Delete</button>
+                </div>
+            <div>
             `;
     }
+    getDeleteRowButtons();
 }
 
 function writeToHTML() {
@@ -38,26 +46,36 @@ function writeToHTML() {
     for (var i = 0; i < allMusic.music.length; i++) {
         songPanel.innerHTML +=
             `
-            <h2 class='dark-yellow'>${allMusic.music[i].Song}</h2>
-            <div class='inlineFlex'>
-                <h4 class='topMargin'>${allMusic.music[i].Artist} | ${allMusic.music[i].Album} | ${allMusic.music[i].Genre}</h4>
+            <div>
+                <h2 class='dark-yellow'>${allMusic.music[i].Song}</h2>
+                <div class='musicRowButton'>
+                    <h4 class='topMargin'>${allMusic.music[i].Artist} | ${allMusic.music[i].Album} | ${allMusic.music[i].Genre}</h4>
+                    <button class='deleteRowButton'>Delete</button>
+                </div>
             </div>
             `;
     }
+    getDeleteRowButtons();
 }
 
-// extra functions no longer in use
+function getDeleteRowButtons() {
+    deleteRowButtons = document.querySelectorAll('.deleteRowButton')
+    deleteRowListener();
+}
 
-// function cleanUpSongs() {
-//     // Loop over the array and remove any words or characters that obviously don't belong.
-//     // Replace the > character in each item with a - character
-//     for (var i = 0; i < songs.length; i++) {
-//         songs[i] = songs[i].replace(/\*|\@|\!|\(/gi, '');
-//         songs[i] = songs[i].replace('>', '-')
-//     }
-//     writeToHTML();
-// }
+function deleteRowListener() {
+    // When delete button is pressed for the row then delete the entire row
+        // for loop to add event listener to each button
+    for (let i = 0; i < deleteRowButtons.length; i++) {
+        deleteRowButtons[i].addEventListener('click', deleteRow);
+    }
+}
 
-// removed from write to HTML function
-        // var song = songs[i];
-        // song = song.split(/\s-\sby\s|\son\sthe\salbum\s/);
+function deleteRow(e) {
+    let button = e.target.parentNode.parentNode.parentNode;
+    button.removeChild(e.target.parentNode.parentNode);
+}
+
+///////////////////////////////////
+/////     Event Listeners     /////
+///////////////////////////////////
