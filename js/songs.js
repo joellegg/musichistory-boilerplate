@@ -5,13 +5,13 @@
 let allMusic = {};
 
 // DOM variables
-var songPanel = document.getElementsByClassName("box right_section")[0];
+var songPanel = document.querySelector("#musicDiv");
 songPanel.innerHTML = "";
 
 // buttons
     // move to function and call when music is added
 let deleteRowButtons;
-let addMusicButton;
+let addMusicButton = document.querySelector("#moreMusicButton");
 
 
 /////////////////////////////
@@ -65,17 +65,9 @@ function deleteRow(e) {
     button.removeChild(e.target.parentNode.parentNode);
 }
 
-// GET THE MORE MUSIC BUTTON
-    // ADD EVENT LISTENER TO THE MORE MUSIC BUTTON SO WHEN PRESSED IT WILL WRITE TO HTML
-function getMoreMusicButton() {
-    addMusicButton = document.querySelector('#moreMusicButton');
-    add2MusicListener();
-}
-
-function add2MusicListener() {
-    addMusicButton.addEventListener('click', add2MusicHTML)
-}
 
 ///////////////////////////////////
 /////     Event Listeners     /////
 ///////////////////////////////////
+
+addMusicButton.addEventListener('click', add2MusicHTML)
