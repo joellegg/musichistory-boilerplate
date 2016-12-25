@@ -11,6 +11,7 @@ songPanel.innerHTML = "";
 // buttons
     // move to function and call when music is added
 let deleteRowButtons;
+let addMusicButton;
 
 
 /////////////////////////////
@@ -18,12 +19,12 @@ let deleteRowButtons;
 /////////////////////////////
 
 // merge all music together (original5Music + add2Music)
-function combineMusic() {
-    allMusic = original5Music;
-    allMusic.music.unshift(add2Music.music[0]);
-    allMusic.music.push(add2Music.music[1]);
-    writeToHTML();
-}
+// function combineMusic() {
+//     allMusic = original5Music;
+//     allMusic.music.unshift(add2Music.music[0]);
+//     allMusic.music.push(add2Music.music[1]);
+//     writeToHTML();
+// }
 
 function addUserMusic() {
     if (userAddedMusic !== undefined) {
@@ -41,25 +42,13 @@ function addUserMusic() {
     getDeleteRowButtons();
 }
 
-function writeToHTML() {
-    songPanel.innerHTML = '';
-    for (var i = 0; i < allMusic.music.length; i++) {
-        songPanel.innerHTML +=
-            `
-            <div>
-                <h2 class='dark-yellow'>${allMusic.music[i].Song}</h2>
-                <div class='musicRowButton'>
-                    <h4 class='topMargin'>${allMusic.music[i].Artist} | ${allMusic.music[i].Album} | ${allMusic.music[i].Genre}</h4>
-                    <button class='deleteRowButton'>Delete</button>
-                </div>
-            </div>
-            `;
-    }
-    getDeleteRowButtons();
+function getDeleteRowButtons() {
+    deleteRowButtons = document.querySelectorAll('.deleteRowButton');
+    getMoreMusicButton();
 }
 
-function getDeleteRowButtons() {
-    deleteRowButtons = document.querySelectorAll('.deleteRowButton')
+function getMoreMusicButton() {
+    addMusicButton = document.querySelector('#moreMusicButton');
     deleteRowListener();
 }
 
@@ -69,6 +58,11 @@ function deleteRowListener() {
     for (let i = 0; i < deleteRowButtons.length; i++) {
         deleteRowButtons[i].addEventListener('click', deleteRow);
     }
+    add2MusicListener();
+}
+
+function add2MusicListener() {
+    addMusicButton.addEventListener('click', add2MusicHTML)
 }
 
 function deleteRow(e) {

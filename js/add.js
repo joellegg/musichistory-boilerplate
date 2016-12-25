@@ -22,7 +22,7 @@ let addSongButton = document.querySelector('#addSong');
 ///   Event Listeners   ///
 ///////////////////////////
 
-// When add music tab is clicked then hide the list view and show add view section
+// Change sections
 addLink.addEventListener("click", function() {
   listView.classList.add("hidden");
   addView.classList.add("visible");
@@ -54,6 +54,40 @@ addSongButton.addEventListener('click', function() {
 /////     Functions     /////
 /////////////////////////////
 
+function original5ToHTML() {
+    songPanel.innerHTML = '';
+    for (var i = 0; i < original5Music.music.length; i++) {
+        songPanel.innerHTML +=
+            `
+            <div>
+                <h2 class='dark-yellow'>${original5Music.music[i].Song}</h2>
+                <div class='musicRowButton'>
+                    <h4 class='topMargin'>${original5Music.music[i].Artist} | ${original5Music.music[i].Album} | ${original5Music.music[i].Genre}</h4>
+                    <button class='deleteRowButton'>Delete</button>
+                </div>
+            </div>
+            `;
+    }
+    songPanel.innerHTML += `<button id='moreMusicButton'>More ></button`;
+    getDeleteRowButtons();
+}
+
+//load add2Music when the more button is pressed
+function add2MusicHTML() {
+    for (var i = 0; i < add2Music.music.length; i++) {
+        songPanel.innerHTML +=
+            `
+            <div>
+                <h2 class='dark-yellow'>${add2Music.music[i].Song}</h2>
+                <div class='musicRowButton'>
+                    <h4 class='topMargin'>${add2Music.music[i].Artist} | ${add2Music.music[i].Album} | ${add2Music.music[i].Genre}</h4>
+                    <button class='deleteRowButton'>Delete</button>
+                </div>
+            </div>
+            `;
+    }
+}
+
 // 3.
 function musicToParse(e) {
     original5Music = JSON.parse(e.target.responseText);
@@ -62,7 +96,7 @@ function musicToParse(e) {
 // 5.
 function music2ToParse(e) {
     add2Music = JSON.parse(e.target.responseText);
-    combineMusic();
+    original5ToHTML();
 }
 
 /////////////////////////////
