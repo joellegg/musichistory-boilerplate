@@ -5,13 +5,13 @@
 let allMusic = {};
 
 // DOM variables
-var songPanel = $("#musicDiv");
+var songPanel = $("#musicDiv")[0];
 songPanel.innerHTML = "";
 
 // buttons
     // move to function and call when music is added
 let deleteRowButtons;
-let addMusicButton = $("#moreMusicButton");
+let addMusicButton = $("#moreMusicButton")[0];
 
 
 /////////////////////////////

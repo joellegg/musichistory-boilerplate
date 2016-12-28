@@ -18,23 +18,25 @@ let addLink = $("#link-add");
 let addView = $("#add-view");
 let addSongButton = $('#addSong');
 
+
 ///////////////////////////
 ///   Event Listeners   ///
 ///////////////////////////
 
 // Change sections
 addLink.click(function() {
-  listView.classList.add("hidden");
-  addView.classList.add("visible");
-  addView.classList.remove("hidden");
+    //console.log('this was clicked')
+    listView.addClass("hidden");
+    addView.addClass("visible");
+    addView.removeClass("hidden");
 });
 
 // Get inputs when the button is pressed
 addSongButton.click(function() {
-    addSong = $('#songName').value;
-    addArtist = $('#artistName').value;
-    addAlbum = $('#albumName').value;
-    addGenre = $('#genreName').value;
+    addSong = $('#songName')[0].value;
+    addArtist = $('#artistName')[0].value;
+    addAlbum = $('#albumName')[0].value;
+    addGenre = $('#genreName')[0].value;
     // if any fields are blank display alert
     // else add songs to the array of songs
     if (addSong === "" || addArtist === "" || addAlbum === "" || addGenre === "") {

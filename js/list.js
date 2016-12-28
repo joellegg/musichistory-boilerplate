@@ -2,9 +2,9 @@ var listLink = $("#link-list");
 var listView = $("#list-view");
 
 listLink.click(function(event) {
-  event.preventDefault();
-  addView.classList.add("hidden");
+    event.preventDefault();
+    addView.addClass("hidden");
 
-  listView.classList.add("visible");
-  listView.classList.remove("hidden");
+    listView.addClass("visible");
+    listView.removeClass("hidden");
 });
