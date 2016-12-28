@@ -96,28 +96,16 @@ function add2MusicHTML() {
     getDeleteRowButtons();
 }
 
-// 3.
-function musicToParse(e) {
-    original5Music = JSON.parse(e.target.responseText);
-    loadJSON(music2ToParse, 'JSON/music2.json');
-}
-// 5.
-function music2ToParse(e) {
-    add2Music = JSON.parse(e.target.responseText);
-    original5ToHTML();
-}
 
 /////////////////////////////
 ////    XMLHR request   /////
 /////////////////////////////
 
-// 1. This function will use the loadJSON function to load the json file and then run function musicToParse
-loadJSON(musicToParse, 'JSON/music.json');
+$.getJSON('JSON/music.json', function(data) {
+    original5Music = data;
+    original5ToHTML();
+});
 
-// 2., 4.
-function loadJSON (functionToRun, jsonFile) {
-    var newRequest = new XMLHttpRequest();
-    newRequest.addEventListener('load', functionToRun);
-    newRequest.open("GET", jsonFile);
-    newRequest.send();
-}
+$.getJSON('JSON/music2.json', function(data) {
+    add2Music = data;
+});
