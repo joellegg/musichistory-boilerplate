@@ -38,3 +38,9 @@
 1. Add a button at the bottom of your music list and label it "More >".
 1. Load the songs from the first list and inject the DOM into the document as you've already done.
 1. When the user clicks the more button, load the songs from the second JSON file and append them to the bottom of the existing music, but before the More button.
+
+# Instructions
+
+This one's simple.
+
+Implement jQuery in your Music History code. Every innerHTML, getElementById, getElementByClassName, event listener and XHR request. Convert 'em all.
