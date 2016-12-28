@@ -5,13 +5,13 @@
 let allMusic = {};
 
 // DOM variables
-var songPanel = document.querySelector("#musicDiv");
+var songPanel = $("#musicDiv");
 songPanel.innerHTML = "";
 
 // buttons
     // move to function and call when music is added
 let deleteRowButtons;
-let addMusicButton = document.querySelector("#moreMusicButton");
+let addMusicButton = $("#moreMusicButton");
 
 
 /////////////////////////////
@@ -47,7 +47,7 @@ function addUserMusic() {
     // DELETE THE ROWS WHEN BUTTON IS PRESSED
 
 function getDeleteRowButtons() {
-    deleteRowButtons = document.querySelectorAll('.deleteRowButton');
+    deleteRowButtons = $('.deleteRowButton');
     deleteRowListener();
 }
 
@@ -55,7 +55,7 @@ function deleteRowListener() {
     // When delete button is pressed for the row then delete the entire row
         // for loop to add event listener to each button
     for (let i = 0; i < deleteRowButtons.length; i++) {
-        deleteRowButtons[i].addEventListener('click', deleteRow);
+        deleteRowButtons[i].click(deleteRow);
     }
 }
 
@@ -70,4 +70,4 @@ function deleteRow(e) {
 /////     Event Listeners     /////
 ///////////////////////////////////
 
-addMusicButton.addEventListener('click', add2MusicHTML)
+addMusicButton.click(add2MusicHTML)

@@ -1,7 +1,7 @@
-var listLink = document.querySelector("#link-list");
-var listView = document.querySelector("#list-view");
+var listLink = $("#link-list");
+var listView = $("#list-view");
 
-listLink.addEventListener("click", function(event) {
+listLink.click(function(event) {
   event.preventDefault();
   addView.classList.add("hidden");
 

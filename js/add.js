@@ -14,27 +14,27 @@ let addAlbum;
 let addGenre;
 
 // buttons or links
-let addLink = document.querySelector("#link-add");
-let addView = document.querySelector("#add-view");
-let addSongButton = document.querySelector('#addSong');
+let addLink = $("#link-add");
+let addView = $("#add-view");
+let addSongButton = $('#addSong');
 
 ///////////////////////////
 ///   Event Listeners   ///
 ///////////////////////////
 
 // Change sections
-addLink.addEventListener("click", function() {
+addLink.click(function() {
   listView.classList.add("hidden");
   addView.classList.add("visible");
   addView.classList.remove("hidden");
 });
 
 // Get inputs when the button is pressed
-addSongButton.addEventListener('click', function() {
-    addSong = document.querySelector('#songName').value;
-    addArtist = document.querySelector('#artistName').value;
-    addAlbum = document.querySelector('#albumName').value;
-    addGenre = document.querySelector('#genreName').value;
+addSongButton.click(function() {
+    addSong = $('#songName').value;
+    addArtist = $('#artistName').value;
+    addAlbum = $('#albumName').value;
+    addGenre = $('#genreName').value;
     // if any fields are blank display alert
     // else add songs to the array of songs
     if (addSong === "" || addArtist === "" || addAlbum === "" || addGenre === "") {
