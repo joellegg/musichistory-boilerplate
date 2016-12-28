@@ -5,13 +5,13 @@
 let allMusic = {};
 
 // DOM variables
-var songPanel = $("#musicDiv")[0];
-songPanel.innerHTML = "";
+let songPanel = $("#musicDiv");
+songPanel.html('');
 
 // buttons
     // move to function and call when music is added
 let deleteRowButtons;
-let addMusicButton = $("#moreMusicButton")[0];
+let addMusicButton = $("#moreMusicButton");
 
 
 /////////////////////////////
@@ -28,7 +28,7 @@ let addMusicButton = $("#moreMusicButton")[0];
 
 function addUserMusic() {
     if (userAddedMusic !== undefined) {
-        songPanel.innerHTML +=
+        newHTML +=
             `
             <div>
                 <h2 class='dark-yellow'>${userAddedMusic.Song}</h2>
@@ -39,6 +39,7 @@ function addUserMusic() {
             <div>
             `;
     }
+    songPanel.html(newHTML)
     getDeleteRowButtons();
 }
 
@@ -54,15 +55,12 @@ function getDeleteRowButtons() {
 function deleteRowListener() {
     // When delete button is pressed for the row then delete the entire row
         // for loop to add event listener to each button
-    for (let i = 0; i < deleteRowButtons.length; i++) {
-        deleteRowButtons[i].click(deleteRow);
-    }
+    deleteRowButtons.click(deleteRow)
 }
 
 function deleteRow(e) {
-    console.log('delete button pressed')
-    let button = e.target.parentNode.parentNode.parentNode;
-    button.removeChild(e.target.parentNode.parentNode);
+    let button = e.target.parentNode.parentNode;
+    button.remove();
 }
 
 
@@ -70,4 +68,4 @@ function deleteRow(e) {
 /////     Event Listeners     /////
 ///////////////////////////////////
 
-addMusicButton.click(add2MusicHTML)
+addMusicButton.on('click', add2MusicHTML);

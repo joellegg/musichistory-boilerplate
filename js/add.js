@@ -33,10 +33,10 @@ addLink.click(function() {
 
 // Get inputs when the button is pressed
 addSongButton.click(function() {
-    addSong = $('#songName')[0].value;
-    addArtist = $('#artistName')[0].value;
-    addAlbum = $('#albumName')[0].value;
-    addGenre = $('#genreName')[0].value;
+    addSong = $('#songName').val();
+    addArtist = $('#artistName').val();
+    addAlbum = $('#albumName').val();
+    addGenre = $('#genreName').val();
     // if any fields are blank display alert
     // else add songs to the array of songs
     if (addSong === "" || addArtist === "" || addAlbum === "" || addGenre === "") {
@@ -56,10 +56,11 @@ addSongButton.click(function() {
 /////     Functions     /////
 /////////////////////////////
 
+let newHTML = '';
+
 function original5ToHTML() {
-    songPanel.innerHTML = '';
     for (var i = 0; i < original5Music.music.length; i++) {
-        songPanel.innerHTML +=
+        newHTML +=
             `
             <div>
                 <h2 class='dark-yellow'>${original5Music.music[i].Song}</h2>
@@ -70,14 +71,17 @@ function original5ToHTML() {
             </div>
             `;
     }
+    songPanel.html(newHTML)
     getDeleteRowButtons();
 
 }
 
 //load add2Music when the more button is pressed
 function add2MusicHTML() {
+    console.log('music button clicked')
+    let addMusicHTML = '';
     for (var i = 0; i < add2Music.music.length; i++) {
-        songPanel.innerHTML +=
+        addMusicHTML +=
             `
             <div>
                 <h2 class='dark-yellow'>${add2Music.music[i].Song}</h2>
@@ -88,6 +92,7 @@ function add2MusicHTML() {
             </div>
             `;
     }
+    songPanel.append(addMusicHTML)
     getDeleteRowButtons();
 }
 
