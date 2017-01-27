@@ -1,0 +1,22 @@
+{
+  "name": "music-history",
+  "homepage": "https://github.com/joellegg/musichistory-boilerplate",
+  "authors": [
+    "joellegg <joellegg@bellsouth.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1"
+  }
+}
