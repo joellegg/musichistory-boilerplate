@@ -1,1 +1,1 @@
-const app = angular.module('SongApp', [ngRoute])
+const app = angular.module('SongApp', ['ngRoute'])

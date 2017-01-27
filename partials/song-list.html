@@ -1,0 +1,55 @@
+<section id='list-view' class='visible'>
+  <div class="container-1 width100">
+    <!-- left box -->
+    <div class="box left_section">
+      <div class="bottom_space">
+        <label for="search">Search:</label>
+        <input type="text" name="search" class="full_width" placeholder="Search...">
+      </div>
+      <div class="bottom_space">
+        <label for="select">Artist:</label>
+        <select name="select" class="full_width">
+          <option value="value1">Radical Face</option>
+        </select>
+      </div>
+      <div class="bottom_space">
+        <label for="select">Album:</label>
+        <select name="select" class="full_width">
+          <option value="value1">The Family Tree: The Branches</option>
+        </select>
+      </div>
+
+      <label class="half_bottom_space">Genre:</label>
+      <div class="container-1 bottom_space">
+        <div class="right50">
+          <input type="checkbox" id="cbox1" value="first_checkbox"><label for="cbox1" class="left-margin">Rock</label><br>
+          <input type="checkbox" id="cbox2" value="second_checkbox"><label for="cbox2" class="left-margin">Classic</label><br>
+          <input type="checkbox" id="cbox3" value="third_checkbox"><label for="cbox3" class="left-margin">Pop</label>
+        </div>
+        <div class="right50">
+          <input type="checkbox" id="cbox4" value="fourth_checkbox"><label for="cbox4" class="left-margin">Jazz</label><br>
+          <input type="checkbox" id="cbox5" value="fifth_checkbox"><label for="cbox5" class="left-margin">Blues</label><br>
+          <input type="checkbox" id="cbox6" value="sixth_checkbox"><label for="cbox6" class="left-margin">Hip Hop</label>
+        </div>
+      </div>
+      <!-- filter button -->
+      <div>
+        <button class="full_width">Filter</button>
+      </div>
+    </div>
+
+    <!-- right box -->
+    <div class="box right_section">
+      <div id="musicDiv">
+        <div>
+          <h2 class="dark-yellow">Song Name</h2>
+          <div class="inlineFlex">
+            <h4>Artist name | Album name | Genre</h4>
+          </div>
+          <button>Delete</button>
+        </div>
+      </div>
+      <button id='moreMusicButton'>More ></button>
+    </div>
+  </div>
+</section>

@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
-<body>
+<body ng-app="SongApp">
 	<!-- top box -->
 	<div>
 		<ul class="box nav_bar">
@@ -16,95 +16,19 @@
 		</ul>
 	</div>
 
-	<section id='list-view' class='visible'>
-		<div class="container-1 width100">
-			<!-- left box -->
-			<div class="box left_section">
-				<div class="bottom_space">
-					<label for="search">Search:</label>
-					<input type="text" name="search" class="full_width" placeholder="Search...">
-				</div>
-				<div class="bottom_space">
-					<label for="select">Artist:</label>
-					<select name="select" class="full_width">
-					  <option value="value1" selected>Radical Face</option>
-					  <option value="value2">Mumford & Sons</option>
-					  <option value="value3">Bone Thugz N Harmony</option>
-					  <option value="value4">Lucas Graham</option>
-					  <option value="value5">Akon</option>
-					</select>
-				</div>
-				<div class="bottom_space">
-					<label for="select">Album:</label>
-					<select name="select" class="full_width">
-					  <option value="value1" selected>The Family Tree: The Branches</option>
-					  <option value="value2">The Family Tree: The Roots</option>
-					  <option value="value3">Album 3</option>
-					  <option value="value4">Album 4</option>
-					  <option value="value5">Album 5</option>
-					</select>
-				</div>
+	<ng-view></ng-view>
 
-				<label class="half_bottom_space">Genre:</label>
-				<div class="container-1 bottom_space">
-					<div class="right50">
-						<input type="checkbox" id="cbox1" value="first_checkbox"><label for="cbox1" class="left-margin">Rock</label><br>
-						<input type="checkbox" id="cbox2" value="second_checkbox"><label for="cbox2" class="left-margin">Classic</label><br>
-						<input type="checkbox" id="cbox3" value="third_checkbox"><label for="cbox3" class="left-margin">Pop</label>
-					</div>
-					<div class="right50">
-						<input type="checkbox" id="cbox4" value="fourth_checkbox"><label for="cbox4" class="left-margin">Jazz</label><br>
-						<input type="checkbox" id="cbox5" value="fifth_checkbox"><label for="cbox5" class="left-margin">Blues</label><br>
-						<input type="checkbox" id="cbox6" value="sixth_checkbox"><label for="cbox6" class="left-margin">Hip Hop</label>
-					</div>
-				</div>
-				<!-- filter button -->
-				<div>
-					<button class="full_width">Filter</button>
-				</div>
-			</div>
+	<!-- lib -->
+	<script src="/lib/angular/angular.min.js"></script>
+	<script src="/lib/angular-route/angular-route.min.js"></script>
 
-			<!-- right box -->
-			<div class="box right_section">
-				<div id="musicDiv">
-					<div>
-						<h2 class="dark-yellow">Song Name</h2>
-						<div class="inlineFlex">
-							<h4>Artist name | Album name | Genre</h4>
-						</div>
-						<button>Delete</button>
-					</div>
-				</div>
-				<button id='moreMusicButton'>More ></button>
-			</div>
-		</div>
-	</section>
+	<!-- app -->
+	<script src="/app/app.js"></script>
+	<script src="/app/config.js"></script>
 
-	<section id='add-view' class='hidden centerFlex'>
-		<div class='addSongs'>
-			<div class='container-1 margin_center'>
-				<div class='addSongs width30'>
-					<p for='songname'>Song name:</p>
-					<p for='artist'>Artist:</p>
-					<p for='album'>Album:</p>
-					<p for='genre'>Genre:</p>
-				</div>
-				<div class='addSongs width70'>
-					<input id='songName' class='full_width' type="text" name="songname">
-					<input id='artistName' class='full_width' type="text" name='artist'>
-					<input id='albumName' class='full_width' type="text" name="album">
-					<input id='genreName' class='full_width' type="text" name="genre">
-				</div>
-			</div>
-			<div class='full_width'>
-				<button id='addSong' class='width30'>Add</button>
-			</div>
-		</div>
-	</section>
+	<!-- controllers -->
+	<script src="/app/controllers/song-detail.js"></script>
+	<script src="/app/controllers/song-list.js"></script>
 
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="js/list.js"></script>
-	<script type="text/javascript" src="js/add.js"></script>
-	<script type="text/javascript" src="js/songs.js"></script>
 </body>
 </html>
