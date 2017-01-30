@@ -5,18 +5,20 @@
     <div class="box left_section">
       <div class="bottom_space">
         <label for="search">Search:</label>
-        <input type="text" name="search" class="full_width" placeholder="Search...">
+        <input type="text" name="search" class="full_width" placeholder="Search..." ng-model="search">
       </div>
       <div class="bottom_space">
-        <label for="select">Artist:</label>
-        <select name="select" class="full_width">
-          <option value="value1">Radical Face</option>
+        <label for="artist">Artist:</label>
+        <select ng-model="artistsel" name="artist" class="full_width">
+          <option></option>
+          <option ng-repeat="song in songs">{{song.Artist}}</option>
         </select>
       </div>
       <div class="bottom_space">
-        <label for="select">Album:</label>
-        <select name="select" class="full_width">
-          <option value="value1">The Family Tree: The Branches</option>
+        <label for="album">Album:</label>
+        <select ng-model="albumsel" name="album" class="full_width">
+          <option></option>
+          <option ng-repeat="song in songs">{{song.Album}}</option>
         </select>
       </div>
 
@@ -44,7 +46,7 @@
       <div id="musicDiv">
 
         <!-- loop through the songs and add them to the dom -->
-        <div ng-repeat="song in songs">
+        <div ng-repeat="song in songs | filter : search || artistsel || albumsel">
           <h2 class="dark-yellow">{{song.Song}}</h2>
           <div class="inlineFlex">
             <h4>{{song.Artist}} | {{song.Album}} | {{song.Genre}}</h4>
