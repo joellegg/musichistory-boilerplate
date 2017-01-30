@@ -29,6 +29,18 @@
       "Artist": "Alanis Morisette",
       "Album": "Jagged Little Pill",
       "Genre": "Pop"
+    },
+    {
+      "Song": "Stay Alive",
+      "Artist": "Jose Gonzalez",
+      "Album": "The Secret Life of Walter Mitty",
+      "Genre": "Indie Folk Revival"
+    },
+    {
+      "Song": "All My Days",
+      "Artist": "Alex Murdoch",
+      "Album": "Time Without Consequence",
+      "Genre": "Indie Folk Revival"
     }
   ]
 }
