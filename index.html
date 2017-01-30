@@ -7,15 +7,17 @@
   <link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
 <body ng-app="SongApp">
-	<!-- top box -->
-	<div>
+
+	<!-- nav box -->
+	<div ng-controller="navCtrl">
 		<ul class="box nav_bar">
-			<li class="right-margin"><a href="#" id='link-list' class="remove-decoration">List Music</a></li>
+			<li class="right-margin"><a href="#/" id='link-list' ng-class="{ active: isCurrentTab('/') }" class="remove-decoration">List Music</a></li>
 			<li class="right-margin">|</li>
-			<li class="right-margin"><a href="#" id='link-add' class="remove-decoration">Add Music</a></li>
+			<li class="right-margin"><a href="#/details" id='link-add' ng-class="{ active: isCurrentTab('/details') }" class="remove-decoration">Add Music</a></li>
 		</ul>
 	</div>
 
+	<!-- div view -->
 	<ng-view></ng-view>
 
 	<!-- lib -->
@@ -29,6 +31,7 @@
 	<!-- controllers -->
 	<script src="/app/controllers/song-detail.js"></script>
 	<script src="/app/controllers/song-list.js"></script>
+	<script src="/app/controllers/nav.js"></script>
 
 	<!-- factories -->
 	<script src="/app/factories/songFactory.js"></script>

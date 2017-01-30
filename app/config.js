@@ -6,7 +6,7 @@ app.config(function ($routeProvider, $locationProvider) {
     controller: 'SongListCtrl',
     templateUrl: 'partials/song-list.html'
   })
-  .when('/detail', {
+  .when('/details', {
     controller: 'DetailsCtrl',
     templateUrl: 'partials/song-details.html'
   })

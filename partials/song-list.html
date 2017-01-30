@@ -1,5 +1,6 @@
 <section id='list-view' class='visible'>
   <div class="container-1 width100">
+
     <!-- left box -->
     <div class="box left_section">
       <div class="bottom_space">
@@ -41,13 +42,17 @@
     <!-- right box -->
     <div class="box right_section">
       <div id="musicDiv">
+
+        <!-- loop through the songs and add them to the dom -->
         <div ng-repeat="song in songs">
-          <h2 class="dark-yellow">Song Name</h2>
+          <h2 class="dark-yellow">{{song.Song}}</h2>
           <div class="inlineFlex">
-            <h4>Artist name | Album name | Genre</h4>
+            <h4>{{song.Artist}} | {{song.Album}} | {{song.Genre}}</h4>
           </div>
           <button>Delete</button>
         </div>
+        <!-- end song ng-repeat -->
+
       </div>
       <button id='moreMusicButton'>More ></button>
     </div>
